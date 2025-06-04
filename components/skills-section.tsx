@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -57,9 +56,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Node.js", level: 65, years: 1 },
       { name: "Express", level: 70, years: 1 },
       { name: "Python", level: 65, years: 2 },
-      // { name: "GraphQL", level: 70, years: 2 },
       { name: "REST API", level: 70, years: 1 },
-      // { name: "Serverless", level: 80, years: 3 },
     ],
   },
   {
@@ -70,10 +67,6 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "MongoDB", level: 75, years: 2 },
       { name: "PostgreSQL", level: 80, years: 1 },
-      // { name: "Firebase", level: 85, years:  },
-      // { name: "Supabase", level: 75, years: 2 },
-      // { name: "Redis", level: 70, years: 2 },
-      // { name: "Prisma", level: 80, years: 2 },
     ],
   },
   {
@@ -125,22 +118,22 @@ export function SkillsSection() {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-14"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             Technical{" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               Skills
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             A comprehensive overview of my technical expertise and proficiency
             across various technologies and tools.
           </p>
@@ -152,13 +145,13 @@ export function SkillsSection() {
           onValueChange={setActiveTab}
           className="w-full"
         >
-          <div className="flex justify-center mb-8">
-            <TabsList className="grid grid-cols-3 md:grid-cols-6 gap-2">
+          <div className="flex justify-center mb-8 overflow-x-auto">
+            <TabsList className="grid h-auto grid-cols-3 grid-rows-2 gap-4 max-w-md mx-auto">
               {skillCategories.map((category) => (
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="flex flex-col items-center gap-1 py-3 px-4 data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white"
+                  className="flex flex-col items-center gap-1 py-3 px-4 data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white rounded-lg"
                 >
                   <category.icon className="w-5 h-5" />
                   <span className="text-xs font-medium">{category.name}</span>
@@ -168,7 +161,7 @@ export function SkillsSection() {
           </div>
 
           {skillCategories.map((category) => (
-            <TabsContent key={category.id} value={category.id} className="mt-0">
+            <TabsContent key={category.id} value={category.id}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -236,6 +229,7 @@ export function SkillsSection() {
                           ))}
                         </div>
                       </div>
+
                       <div className="space-y-4">
                         {category.skills.slice(3).map((skill) => (
                           <motion.div
@@ -285,7 +279,7 @@ export function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
             { icon: LineChart, title: "Years Experience", value: "2+" },
