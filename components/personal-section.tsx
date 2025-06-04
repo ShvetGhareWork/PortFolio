@@ -17,7 +17,7 @@ import { Badge } from "@/components/ui/badge";
 
 const personalInfo = {
   name: "Shvet Ghare",
-  title: "Thriving Excellnce in Development",
+  title: "Thriving Excellence in Development",
   location: "Mumbai, India",
   age: 19,
   bio: "I'm a passionate developer who believes in the power of technology to solve real-world problems. When I'm not coding, you'll find me exploring new coffee shops, capturing moments through photography, or planning my next adventure. I love the intersection of creativity and technology, which is why I enjoy both development and design.",
