@@ -112,6 +112,18 @@ const projects = [
     github: "https://github.com/ShvetGhareWork/stockpricepredictor",
     live: "#",
   },
+  {
+    id: 9,
+    title: "Bug Bounty Stimualtion",
+    description:
+      "Bug Bounty platform — a curated space for security enthusiasts to discover, track, and practice reporting on real-world bug bounty programs!",
+    image:
+      "https://plus.unsplash.com/premium_photo-1663091633166-20ef12aa7b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Next.js", "Node.js", "DB"],
+    category: "Full-Stack",
+    github: "https://github.com/ShvetGhareWork/BugBounty",
+    live: "https://bug-bounty-frontend.vercel.app/",
+  },
 ];
 
 const categories = ["All", "Full-Stack", "AI/ML", "Mobile", "Design", "IoT"];
