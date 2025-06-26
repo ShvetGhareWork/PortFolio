@@ -113,7 +113,7 @@ const projects = [
     live: "#",
   },
   {
-    id: 9,
+    id: 10,
     title: "Bug Bounty Stimualtion",
     description:
       "Bug Bounty platform — a curated space for security enthusiasts to discover, track, and practice reporting on real-world bug bounty programs!",
@@ -125,7 +125,7 @@ const projects = [
     live: "https://bug-bounty-frontend.vercel.app/",
   },
   {
-    id: 9,
+    id: 11,
     title: "MindGuard 🧠",
     description:
       "a mental health companion web app built with the aim of making personal well-being management secure, accessible, and structured.",
