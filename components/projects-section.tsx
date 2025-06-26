@@ -124,6 +124,19 @@ const projects = [
     github: "https://github.com/ShvetGhareWork/BugBounty",
     live: "https://bug-bounty-frontend.vercel.app/",
   },
+  {
+    id: 9,
+    title: "MindGuard 🧠",
+    description:
+      "a mental health companion web app built with the aim of making personal well-being management secure, accessible, and structured.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1689177356594-b988a1cc45ff?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Next.js", "Node.js", "DB", "Tailwind", "ML"],
+    category: "AI/ML",
+    github:
+      "https://github.com/ShvetGhareWork/AI-Powered-Mental-Health-Early-Decision",
+    live: "https://ai-powered-mental-health-early-deci.vercel.app/",
+  },
 ];
 
 const categories = ["All", "Full-Stack", "AI/ML", "Mobile", "Design", "IoT"];
