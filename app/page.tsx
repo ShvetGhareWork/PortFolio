@@ -13,6 +13,7 @@ import { BlogSection } from "@/components/blog-section";
 import { ContactSection } from "@/components/contact-section";
 import { ParticleBackground } from "@/components/particle-background";
 import { ScrollProgress } from "@/components/scroll-progress";
+import { ResumeSection } from "@/components/resume-section";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -44,6 +45,7 @@ export default function Home() {
           <PersonalSection />
           <SkillsSection />
           <ProjectsSection />
+          <ResumeSection />
           <BlogSection />
           <ContactSection />
         </main>
