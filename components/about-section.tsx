@@ -82,7 +82,7 @@ export function AboutSection() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             About{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className=" from-purple-600 to-pink-600 bg-clip-text ">
               Me
             </span>
           </h2>

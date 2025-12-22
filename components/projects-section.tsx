@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, Filter } from "lucide-react";
+import { ExternalLink, Github, Filter, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { projectsData } from "@/lib/projects-data";
+import Link from "next/link";
 
 const projects = [
   {
@@ -18,6 +20,11 @@ const projects = [
     category: "Full-Stack",
     github: "https://github.com/ShvetGhareWork/Triftopia-final",
     live: "https://triftopia-frontend.vercel.app/",
+    impact: {
+      metric: "10k+ Products",
+      description: "Handles large inventory with optimized search",
+      performance: "95+ Lighthouse Score",
+    },
   },
   {
     id: 2,
@@ -30,6 +37,11 @@ const projects = [
     category: "AI/ML",
     github: "https://github.com/ShvetGhareWork/PoemAnyPoet",
     live: "https://poem-any-poet-olive.vercel.app/",
+    impact: {
+      metric: "AI-Powered",
+      description: "Real-time image analysis & poem generation",
+      performance: "< 2s Response Time",
+    },
   },
   {
     id: 3,
@@ -41,6 +53,11 @@ const projects = [
     category: "Full-Stack",
     github: "https://github.com/ShvetGhareWork/Usepopcorn",
     live: "https://v0-responsive-website-redesign-khaki.vercel.app/",
+    impact: {
+      metric: "Smart Recommendations",
+      description: "Personalized movie suggestions",
+      performance: "Real-time Updates",
+    },
   },
   {
     id: 4,
@@ -52,6 +69,11 @@ const projects = [
     category: "Design",
     github: "#",
     live: "#",
+    impact: {
+      metric: "60 FPS Animations",
+      description: "Smooth, performant interactions",
+      performance: "Fully Responsive",
+    },
   },
   {
     id: 5,
@@ -64,6 +86,11 @@ const projects = [
     category: "Full-Stack",
     github: "https://github.com/ShvetGhareWork/AniVerse",
     live: "https://ani-verse-red.vercel.app/",
+    impact: {
+      metric: "1000+ Anime Listed",
+      description: "Comprehensive database with search",
+      performance: "Fast Load Times",
+    },
   },
   {
     id: 6,
@@ -76,6 +103,11 @@ const projects = [
     category: "Full-Stack",
     github: "https://github.com/ShvetGhareWork/ChargingStations",
     live: "https://charging-stations-frontend.vercel.app/",
+    impact: {
+      metric: "Location-Based",
+      description: "Real-time EV station mapping",
+      performance: "Interactive Maps",
+    },
   },
   {
     id: 7,
@@ -87,6 +119,11 @@ const projects = [
     category: "Full-Stack",
     github: "https://github.com/ShvetGhareWork/LeaflyKitchen",
     live: "https://leafly-kitchen-gules.vercel.app/",
+    impact: {
+      metric: "Recipe Management",
+      description: "Organized meal planning system",
+      performance: "Clean UI/UX",
+    },
   },
   {
     id: 8,
@@ -99,6 +136,11 @@ const projects = [
     category: "AI/ML",
     github: "https://github.com/ShvetGhareWork/Opencvpiano",
     live: "#",
+    impact: {
+      metric: "Real-Time Detection",
+      description: "Hand gesture recognition with OpenCV",
+      performance: "30+ FPS Processing",
+    },
   },
   {
     id: 9,
@@ -111,6 +153,11 @@ const projects = [
     category: "AI/ML",
     github: "https://github.com/ShvetGhareWork/stockpricepredictor",
     live: "#",
+    impact: {
+      metric: "ML Predictions",
+      description: "Historical data analysis & forecasting",
+      performance: "Accurate Models",
+    },
   },
   {
     id: 10,
@@ -123,6 +170,11 @@ const projects = [
     category: "Full-Stack",
     github: "https://github.com/ShvetGhareWork/BugBounty",
     live: "https://bug-bounty-frontend.vercel.app/",
+    impact: {
+      metric: "Security Platform",
+      description: "Bug bounty program tracking",
+      performance: "Organized Dashboard",
+    },
   },
   {
     id: 11,
@@ -136,6 +188,71 @@ const projects = [
     github:
       "https://github.com/ShvetGhareWork/AI-Powered-Mental-Health-Early-Decision",
     live: "https://ai-powered-mental-health-early-deci.vercel.app/",
+    impact: {
+      metric: "AI Health Insights",
+      description: "Mental health tracking & analysis",
+      performance: "Secure & Private",
+    },
+  },
+  {
+    id: 12,
+    title: "CareerPath-AI",
+    description: "An intelligent career recommendation system powered by AI to help students discover their ideal career path. Analyzes skills, academics, and interests for personalized, data-driven recommendations.",
+    image: "https://career-path-ai-sooty.vercel.app/banner.png",
+    tags: ["React", "Node.js", "MongoDB", "Python", "AI/ML"],
+    category: "AI/ML",
+    github: "https://github.com/ShvetGhareWork/CareerPath-AI-Recommender",
+    live: "https://career-path-ai-recommender.vercel.app/",
+    impact: {
+      metric: "AI-Powered",
+      description: "Personalized career guidance and skill gap analysis",
+      performance: "Real-time Recommendations",
+    },
+  },
+  {
+    id: 13,
+    title: "AI-Enhanced E-Commerce Platform",
+    description: "A production-ready, full-stack e-commerce platform powered by Google Gemini AI, featuring intelligent product recommendations, smart search, fraud detection, and seamless Razorpay payment integration.",
+    image: "https://ai-e-commerce-platform.vercel.app/Hero-pic.png",
+    tags: ["React", "Node.js", "MongoDB", "Razorpay", "AI/ML"],
+    category: "Full-Stack",
+    github: "https://github.com/ShvetGhareWork/AI-Enhanced-E-Commerce-Platform",
+    live: "https://ai-enhanced-e-commerce-platform.vercel.app/",
+    impact: {
+      metric: "8 AI Algorithms",
+      description: "Handles large inventory with optimized search and fraud detection",
+      performance: "95+ Lighthouse Score",
+    },
+  },
+  {
+    id: 14,
+    title: "1Hub - Formula 1 Analytics Platform",
+    description: "A production-ready MERN + Next.js Formula 1 analytics website with historical data (1950-2025), driver profiles, race insights, interactive visualizations, and a Fantasy F1 league.",
+    image: "https://f1hub.vercel.app/banner.png",
+    tags: ["Next.js", "Node.js", "MongoDB", "Python", "AI/ML"],
+    category: "Full-Stack",
+    github: "https://github.com/ShvetGhareWork/F1Hub",
+    live: "https://formula1-hub-frontend.vercel.app/",
+    impact: {
+      metric: "1950-2025 Data",
+      description: "Real-time analytics and interactive visualizations",
+      performance: "Interactive Charts & Dashboards",
+    },
+  },
+  {
+    id: 15,
+    title: "Create React App",
+    description: "An officially supported way to create single-page React applications. Sets up a modern web app with no build configuration, allowing developers to focus on code.",
+    image: "https://create-react-app.dev/img/logo.svg",
+    tags: ["React", "JavaScript", "Webpack", "Babel"],
+    category: "Development Tool",
+    github: "https://github.com/facebook/create-react-app",
+    live: "https://create-react-app.dev/",
+    impact: {
+      metric: "Zero-Config",
+      description: "Simplified React project setup for beginners",
+      performance: "Streamlined Development",
+    },
   },
 ];
 
@@ -162,7 +279,7 @@ export function ProjectsSection() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             Featured{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="from-purple-600 to-pink-600 bg-clip-text">
               Projects
             </span>
           </h2>
@@ -258,6 +375,24 @@ export function ProjectsSection() {
                     <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
                       {project.description}
                     </p>
+                    
+                    {/* Impact Metrics */}
+                    {project.impact && (
+                      <div className="mb-4 p-3 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-lg border border-purple-200 dark:border-purple-800">
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-sm font-bold text-purple-700 dark:text-purple-300">
+                            {project.impact.metric}
+                          </span>
+                          <Badge variant="outline" className="text-xs border-purple-300 dark:border-purple-700">
+                            {project.impact.performance}
+                          </Badge>
+                        </div>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">
+                          {project.impact.description}
+                        </p>
+                      </div>
+                    )}
+                    
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <Badge

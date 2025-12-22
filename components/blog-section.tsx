@@ -69,7 +69,7 @@ export function BlogSection() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             Latest{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="from-purple-600 to-pink-600 bg-clip-text">
               Articles
             </span>
           </h2>

@@ -129,7 +129,7 @@ export function SkillsSection() {
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             Technical{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="from-purple-600 to-pink-600 bg-clip-text">
               Skills
             </span>
           </h2>
@@ -299,7 +299,7 @@ export function SkillsSection() {
               <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center">
                 <stat.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-3xl font-bold mb-1 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <h3 className="text-3xl font-bold mb-1 from-purple-600 to-pink-600 bg-clip-text">
                 {stat.value}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">{stat.title}</p>

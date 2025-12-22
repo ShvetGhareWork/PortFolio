@@ -97,7 +97,7 @@ export function ContactSection() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             Get In{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="from-purple-600 to-pink-600 bg-clip-text">
               Touch
             </span>
           </h2>

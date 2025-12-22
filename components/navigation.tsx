@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RecruiterModeToggle } from "@/components/recruiter-mode-toggle";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -21,7 +22,6 @@ const navItems = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,9 +53,9 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+            className="text-2xl font-bold from-purple-600 to-pink-600 bg-clip-text"
           >
-            Portfolio
+            SHVET
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -71,27 +71,15 @@ export function Navigation() {
                 {item.name}
               </motion.button>
             ))}
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="ml-4"
-            >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
+            <RecruiterModeToggle />
+            <ThemeSwitcher />
           </div>
 
+
           {/* Mobile Navigation */}
-          <div className="lg:hidden flex items-center space-x-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
+          <div className="lg:hidden flex items-center space-x-2">
+            <RecruiterModeToggle />
+            <ThemeSwitcher />
             <Button
               variant="ghost"
               size="icon"
