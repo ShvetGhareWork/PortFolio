@@ -18,7 +18,7 @@ export default function SocialProofSection() {
   const metrics: Metric[] = [
     {
       icon: Briefcase,
-      value: 50,
+      value: 10,
       label: "Projects Completed",
       suffix: "+",
       color: "text-blue-600",
@@ -26,7 +26,7 @@ export default function SocialProofSection() {
     },
     {
       icon: Code,
-      value: 5,
+      value: 3,
       label: "Years Experience",
       suffix: "+",
       color: "text-purple-600",
@@ -34,7 +34,7 @@ export default function SocialProofSection() {
     },
     {
       icon: Users,
-      value: 30,
+      value: 3,
       label: "Happy Clients",
       suffix: "+",
       color: "text-green-600",
@@ -42,7 +42,7 @@ export default function SocialProofSection() {
     },
     {
       icon: GitCommit,
-      value: 2500,
+      value: 1671,
       label: "Code Commits",
       suffix: "+",
       color: "text-orange-600",

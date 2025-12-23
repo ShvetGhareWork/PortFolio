@@ -12,223 +12,27 @@ import Link from "next/link";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Create React App",
     description:
-      "A modern, full-featured e-commerce platform built with Next.js and Stripe integration.",
-    image: "https://triftopia-frontend.vercel.app/Hero-pic.png",
-    tags: ["React", "Javascript", "Razorpay", "Tailwind CSS"],
-    category: "Full-Stack",
-    github: "https://github.com/ShvetGhareWork/Triftopia-final",
-    live: "https://triftopia-frontend.vercel.app/",
+      "An officially supported way to create single-page React applications. Sets up a modern web app with no build configuration, allowing developers to focus on code.",
+    image:
+      "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg", // developer coding concept
+    tags: ["React", "JavaScript", "Webpack", "Babel"],
+    category: "Development Tool",
+    github: "https://github.com/facebook/create-react-app",
+    live: "https://create-react-app.dev/",
     impact: {
-      metric: "10k+ Products",
-      description: "Handles large inventory with optimized search",
-      performance: "95+ Lighthouse Score",
+      metric: "Zero-Config",
+      description: "Simplified React project setup for beginners",
+      performance: "Streamlined Development",
     },
   },
   {
     id: 2,
-    title: "Image to Poem Generator",
-    description:
-      "An innovative web app that generates poems based on uploaded images using AI.Uses Gemeni API for image analysis and poem generation.",
-    image:
-      "https://i.ytimg.com/vi/JJ-hkyK84Bg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLClk8NwAkqZv7k2jxaA6fm-ktwYug",
-    tags: ["React", "Python", "Generative AI"],
-    category: "AI/ML",
-    github: "https://github.com/ShvetGhareWork/PoemAnyPoet",
-    live: "https://poem-any-poet-olive.vercel.app/",
-    impact: {
-      metric: "AI-Powered",
-      description: "Real-time image analysis & poem generation",
-      performance: "< 2s Response Time",
-    },
-  },
-  {
-    id: 3,
-    title: "Use POPCORN",
-    description: "A full-stack movie recommendation app with sleek UI.",
-    image:
-      "https://www.tennessean.com/gcdn/-mm-/cdd1f619116f80c93da3c0ee0c1219a623da0fa4/c=732-0-3780-3048/local/-/media/2018/03/03/USATODAY/USATODAY/636556466259406124-AFP-AFP-11M370.jpg",
-    tags: ["Next.js", "Node.js", "DB"],
-    category: "Full-Stack",
-    github: "https://github.com/ShvetGhareWork/Usepopcorn",
-    live: "https://v0-responsive-website-redesign-khaki.vercel.app/",
-    impact: {
-      metric: "Smart Recommendations",
-      description: "Personalized movie suggestions",
-      performance: "Real-time Updates",
-    },
-  },
-  {
-    id: 4,
-    title: "Creative Portfolio",
-    description:
-      "A stunning portfolio website for a creative agency with immersive animations.You are Lookiing at it BTW",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Next.js", "Typescript", "MongoDB", "Node.js"],
-    category: "Design",
-    github: "#",
-    live: "#",
-    impact: {
-      metric: "60 FPS Animations",
-      description: "Smooth, performant interactions",
-      performance: "Fully Responsive",
-    },
-  },
-  {
-    id: 5,
-    title: "Aniverse",
-    description:
-      "AniVerse is an interactive anime listing and information platform, providing fans with a well-organized database",
-    image:
-      "https://i.pinimg.com/736x/50/08/ef/5008efb9df96969624d2674645027a3a.jpg",
-    tags: ["React", "Javascript", "Razorpay", "Tailwind CSS"],
-    category: "Full-Stack",
-    github: "https://github.com/ShvetGhareWork/AniVerse",
-    live: "https://ani-verse-red.vercel.app/",
-    impact: {
-      metric: "1000+ Anime Listed",
-      description: "Comprehensive database with search",
-      performance: "Fast Load Times",
-    },
-  },
-  {
-    id: 6,
-    title: "ChargeStation",
-    description:
-      "ChargingStations is a full-stack web application that helps users locate, add, and manage electric vehicle (EV) charging stations.",
-    image:
-      "https://images.unsplash.com/photo-1707341597123-c53bbb7e7f93?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Vue.js", "MongoDB", "CSS", "Vercel"],
-    category: "Full-Stack",
-    github: "https://github.com/ShvetGhareWork/ChargingStations",
-    live: "https://charging-stations-frontend.vercel.app/",
-    impact: {
-      metric: "Location-Based",
-      description: "Real-time EV station mapping",
-      performance: "Interactive Maps",
-    },
-  },
-  {
-    id: 7,
-    title: "Leafly Kitchen",
-    description:
-      "A recipe management and meal planner web app, allowing users to browse with a clean UI. Frontend Website only",
-    image: "https://leafly-kitchen-gules.vercel.app/Cafe1.png",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    category: "Full-Stack",
-    github: "https://github.com/ShvetGhareWork/LeaflyKitchen",
-    live: "https://leafly-kitchen-gules.vercel.app/",
-    impact: {
-      metric: "Recipe Management",
-      description: "Organized meal planning system",
-      performance: "Clean UI/UX",
-    },
-  },
-  {
-    id: 8,
-    title: "AI Virtual Piano",
-    description:
-      "A computer vision-based AI project using OpenCV to detect hand gestures and play virtual piano keys on screen in real-time.",
-    image:
-      "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Python", "OpenCV", "AI/ML"],
-    category: "AI/ML",
-    github: "https://github.com/ShvetGhareWork/Opencvpiano",
-    live: "#",
-    impact: {
-      metric: "Real-Time Detection",
-      description: "Hand gesture recognition with OpenCV",
-      performance: "30+ FPS Processing",
-    },
-  },
-  {
-    id: 9,
-    title: "Stock Price Predictor",
-    description:
-      "An AI-powered stock market prediction model using machine learning algorithms to forecast stock prices based on historical data.",
-    image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
-    category: "AI/ML",
-    github: "https://github.com/ShvetGhareWork/stockpricepredictor",
-    live: "#",
-    impact: {
-      metric: "ML Predictions",
-      description: "Historical data analysis & forecasting",
-      performance: "Accurate Models",
-    },
-  },
-  {
-    id: 10,
-    title: "Bug Bounty Stimualtion",
-    description:
-      "Bug Bounty platform — a curated space for security enthusiasts to discover, track, and practice reporting on real-world bug bounty programs!",
-    image:
-      "https://plus.unsplash.com/premium_photo-1663091633166-20ef12aa7b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Next.js", "Node.js", "DB"],
-    category: "Full-Stack",
-    github: "https://github.com/ShvetGhareWork/BugBounty",
-    live: "https://bug-bounty-frontend.vercel.app/",
-    impact: {
-      metric: "Security Platform",
-      description: "Bug bounty program tracking",
-      performance: "Organized Dashboard",
-    },
-  },
-  {
-    id: 11,
-    title: "MindGuard 🧠",
-    description:
-      "a mental health companion web app built with the aim of making personal well-being management secure, accessible, and structured.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1689177356594-b988a1cc45ff?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Next.js", "Node.js", "DB", "Tailwind", "ML"],
-    category: "AI/ML",
-    github:
-      "https://github.com/ShvetGhareWork/AI-Powered-Mental-Health-Early-Decision",
-    live: "https://ai-powered-mental-health-early-deci.vercel.app/",
-    impact: {
-      metric: "AI Health Insights",
-      description: "Mental health tracking & analysis",
-      performance: "Secure & Private",
-    },
-  },
-  {
-    id: 12,
-    title: "CareerPath-AI",
-    description: "An intelligent career recommendation system powered by AI to help students discover their ideal career path. Analyzes skills, academics, and interests for personalized, data-driven recommendations.",
-    image: "https://career-path-ai-sooty.vercel.app/banner.png",
-    tags: ["React", "Node.js", "MongoDB", "Python", "AI/ML"],
-    category: "AI/ML",
-    github: "https://github.com/ShvetGhareWork/CareerPath-AI-Recommender",
-    live: "https://career-path-ai-recommender.vercel.app/",
-    impact: {
-      metric: "AI-Powered",
-      description: "Personalized career guidance and skill gap analysis",
-      performance: "Real-time Recommendations",
-    },
-  },
-  {
-    id: 13,
-    title: "AI-Enhanced E-Commerce Platform",
-    description: "A production-ready, full-stack e-commerce platform powered by Google Gemini AI, featuring intelligent product recommendations, smart search, fraud detection, and seamless Razorpay payment integration.",
-    image: "https://ai-e-commerce-platform.vercel.app/Hero-pic.png",
-    tags: ["React", "Node.js", "MongoDB", "Razorpay", "AI/ML"],
-    category: "Full-Stack",
-    github: "https://github.com/ShvetGhareWork/AI-Enhanced-E-Commerce-Platform",
-    live: "https://ai-enhanced-e-commerce-platform.vercel.app/",
-    impact: {
-      metric: "8 AI Algorithms",
-      description: "Handles large inventory with optimized search and fraud detection",
-      performance: "95+ Lighthouse Score",
-    },
-  },
-  {
-    id: 14,
     title: "1Hub - Formula 1 Analytics Platform",
-    description: "A production-ready MERN + Next.js Formula 1 analytics website with historical data (1950-2025), driver profiles, race insights, interactive visualizations, and a Fantasy F1 league.",
-    image: "https://f1hub.vercel.app/banner.png",
+    description:
+      "A production-ready MERN + Next.js Formula 1 analytics website with historical data and interactive visualizations.",
+image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1600&q=80",
     tags: ["Next.js", "Node.js", "MongoDB", "Python", "AI/ML"],
     category: "Full-Stack",
     github: "https://github.com/ShvetGhareWork/F1Hub",
@@ -240,18 +44,170 @@ const projects = [
     },
   },
   {
-    id: 15,
-    title: "Create React App",
-    description: "An officially supported way to create single-page React applications. Sets up a modern web app with no build configuration, allowing developers to focus on code.",
-    image: "https://create-react-app.dev/img/logo.svg",
-    tags: ["React", "JavaScript", "Webpack", "Babel"],
-    category: "Development Tool",
-    github: "https://github.com/facebook/create-react-app",
-    live: "https://create-react-app.dev/",
+    id: 3,
+    title: "AI-Enhanced E-Commerce Platform",
+    description:
+      "A full-stack e-commerce platform powered by AI for intelligent recommendations, smart search, and fraud detection.",
+    image:
+      "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg", // ecommerce analytics/dashboard
+    tags: ["React", "Node.js", "MongoDB", "Razorpay", "AI/ML"],
+    category: "Full-Stack",
+    github: "https://github.com/ShvetGhareWork/AI-Enhanced-E-Commerce-Platform",
+    live: "https://ai-enhanced-e-commerce-platform.vercel.app/",
     impact: {
-      metric: "Zero-Config",
-      description: "Simplified React project setup for beginners",
-      performance: "Streamlined Development",
+      metric: "8 AI Algorithms",
+      description: "Optimized search and fraud detection",
+      performance: "95+ Lighthouse Score",
+    },
+  },
+  {
+    id: 4,
+    title: "CareerPath-AI",
+    description:
+      "An AI-powered career recommendation system that analyzes skills and interests to personalize guidance.",
+    image:
+      "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg", // career guidance & planning
+    tags: ["React", "Node.js", "MongoDB", "Python", "AI/ML"],
+    category: "AI/ML",
+    github: "https://github.com/ShvetGhareWork/CareerPath-AI-Recommender",
+    live: "https://career-path-ai-recommender.vercel.app/",
+    impact: {
+      metric: "AI-Powered",
+      description: "Personalized career guidance",
+      performance: "Real-time Recommendations",
+    },
+  },
+  {
+    id: 5,
+    title: "Bug Bounty Simulation",
+    description:
+      "A curated platform for security enthusiasts to discover and practice bug bounty programs.",
+    image:
+      "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg", // security / bug tracking
+    tags: ["Next.js", "Node.js", "DB"],
+    category: "Full-Stack",
+    github: "https://github.com/ShvetGhareWork/BugBounty",
+    live: "https://bug-bounty-frontend.vercel.app/",
+    impact: {
+      metric: "Security Platform",
+      description: "Bug bounty program tracking",
+      performance: "Organized Dashboard",
+    },
+  },
+  {
+    id: 6,
+    title: "Stock Price Predictor",
+    description:
+      "An AI-powered stock market prediction model using machine learning algorithms.",
+    image:
+      "https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg", // stock market chart concept
+    tags: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
+    category: "AI/ML",
+    github: "https://github.com/ShvetGhareWork/stockpricepredictor",
+    live: "#",
+    impact: {
+      metric: "ML Predictions",
+      description: "Historical data forecasting",
+      performance: "Accurate Models",
+    },
+  },
+  {
+    id: 7,
+    title: "AI Virtual Piano",
+    description:
+      "A computer vision-based AI project detecting hand gestures and playing virtual piano keys.",
+    image:
+      "https://images.pexels.com/photos/164712/pexels-photo-164712.jpeg", // hand gestures piano
+    tags: ["Python", "OpenCV", "AI/ML"],
+    category: "AI/ML",
+    github: "https://github.com/ShvetGhareWork/Opencvpiano",
+    live: "#",
+    impact: {
+      metric: "Real-Time Detection",
+      description: "Hand gesture recognition",
+      performance: "30+ FPS Processing",
+    },
+  },
+  {
+    id: 8,
+    title: "ChargeStation",
+    description:
+      "A full-stack web app to locate and manage electric vehicle charging stations in real-time.",
+    image:
+      "https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg", // EV charging stations map
+    tags: ["Vue.js", "MongoDB", "CSS", "Vercel"],
+    category: "Full-Stack",
+    github: "https://github.com/ShvetGhareWork/ChargingStations",
+    live: "https://charging-stations-frontend.vercel.app/",
+    impact: {
+      metric: "Location-Based",
+      description: "Real-time EV station mapping",
+      performance: "Interactive Maps",
+    },
+  },
+  {
+    id: 9,
+    title: "Aniverse",
+    description:
+      "An interactive anime listing and information platform with a structured database.",
+    image:
+      "https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg", // anime posters & listing
+    tags: ["React", "Javascript", "Tailwind CSS"],
+    category: "Full-Stack",
+    github: "https://github.com/ShvetGhareWork/AniVerse",
+    live: "https://ani-verse-red.vercel.app/",
+    impact: {
+      metric: "1000+ Anime",
+      description: "Searchable anime database",
+      performance: "Fast Load Times",
+    },
+  },
+  {
+    id: 10,
+    title: "Creative Portfolio",
+    description:
+      "A stunning portfolio website for a creative agency with immersive animations.",
+    image:
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg", // portfolio showcase UI
+    tags: ["Next.js", "Typescript", "MongoDB", "Node.js"],
+    category: "Design",
+    github: "#",
+    live: "#",
+    impact: {
+      metric: "60 FPS Animations",
+      description: "Smooth interactions",
+      performance: "Fully Responsive",
+    },
+  },
+  {
+    id: 11,
+    title: "Use POPCORN",
+    description: "A full-stack movie recommendation app with sleek UI.",
+    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80",
+    tags: ["Next.js", "Node.js", "DB"],
+    category: "Full-Stack",
+    github: "https://github.com/ShvetGhareWork/Usepopcorn",
+    live: "https://v0-responsive-website-redesign-khaki.vercel.app/",
+    impact: {
+      metric: "Smart Recommendations",
+      description: "Personalized movie suggestions",
+      performance: "Real-time Updates",
+    },
+  },
+  {
+    id: 12,
+    title: "Image to Poem Generator",
+    description:
+      "An AI web app that generates poems from uploaded images using Gemini API.",
+image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600&q=80",
+    tags: ["React", "Python", "Generative AI"],
+    category: "AI/ML",
+    github: "https://github.com/ShvetGhareWork/PoemAnyPoet",
+    live: "https://poem-any-poet-olive.vercel.app/",
+    impact: {
+      metric: "AI-Powered",
+      description: "Image-to-poem generation",
+      performance: "< 2s Response Time",
     },
   },
 ];

@@ -64,7 +64,7 @@ export function HeroSection() {
           >
             <Button
               size="lg"
-              className=" from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 text-lg"
+              className=" from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-3 text-lg"
               onClick={() =>
                 document
                   .querySelector("#projects")

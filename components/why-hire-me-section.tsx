@@ -226,9 +226,9 @@ export function WhyHireMeSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="border-0 shadow-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+          <Card className="border-0 shadow-xl bg-gradient-to-r from-purple-600 to-pink-600">
             <CardContent className="p-8">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
                 Ready to Build Something Amazing Together?
               </h3>
               <p className="text-lg mb-6 text-purple-100">

@@ -239,7 +239,7 @@ export function PersonalSection() {
                 <Card className="bg-white dark:bg-gray-800 border-0 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                   <CardContent className="p-6 text-center">
                     <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <interest.icon className="w-8 h-8 text-white" />
+                      <interest.icon className="w-8 h-8 " />
                     </div>
                     <h4 className="text-xl font-semibold mb-2">
                       {interest.name}
