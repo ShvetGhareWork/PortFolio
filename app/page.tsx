@@ -52,7 +52,6 @@ export default function Home() {
 
           <main className="relative z-10">
             <HeroSection />
-            <ScrollytellingSection />
             <SocialProofSection />
             <AboutSection />
             <WhyHireMeSection />
@@ -67,6 +66,7 @@ export default function Home() {
             <ResumeSection />
             <BlogSection />
             <HiringCTASection />
+            <ScrollytellingSection />
             <ContactSection />
           </main>
         </div>
