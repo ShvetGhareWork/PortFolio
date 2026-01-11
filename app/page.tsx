@@ -23,6 +23,7 @@ import ContributionsHeatmap from "@/components/contributions-heatmap";
 import TestimonialsSection from "@/components/testimonials-section";
 import CertificationsSection from "@/components/certifications-section";
 import FeaturedSection from "@/components/featured-section";
+import { ScrollytellingSection } from "@/components/scrollytelling-section";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -44,13 +45,14 @@ export default function Home() {
   return (
     <MultiThemeProvider>
       <RecruiterModeProvider>
-        <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden transition-colors duration-300">
+        <div className="relative min-h-screen bg-background text-foreground transition-colors duration-300">
           <ParticleBackground />
           <ScrollProgress scaleX={scaleX} />
           <Navigation />
 
           <main className="relative z-10">
             <HeroSection />
+            <ScrollytellingSection />
             <SocialProofSection />
             <AboutSection />
             <WhyHireMeSection />
